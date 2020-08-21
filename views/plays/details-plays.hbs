@@ -1,0 +1,27 @@
+<div class="container">
+
+    <section class="details">
+        <h1>Theater title: Who's Afraid of Virginia Woolf? by Edward Albee</h1>
+        <div>
+            <img src="{{imageUrl}}" />
+        </div>
+    </section>
+
+    <section class="details">
+        <h3>Theater Description</h3>
+        <p>{{description}}</p>
+        <div class="buttons">
+
+            {{#if isTheCreator}}
+            <a class="btn delete" href="/plays/delete-plays/{{_id}}">Delete</a>
+            <a class="btn edit" href="/plays/edit-plays/{{_id}}">Edit</a>
+            {{else}}
+            {{#if imAlreadyIn}}
+            <span class="liked">You have already liked this play!</span>
+            {{else}}
+            <a class="btn like" href="">Like</a>
+            {{/if}}
+            {{/if}}
+        </div>
+    </section>
+</div>
